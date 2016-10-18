@@ -44,7 +44,7 @@ function transpose(array) {
         return array.slice().reverse();
     }
 
-    return array[0].map((column, index) => array.map(row => row[index]));
+    return array[0].map((_, index) => array.map(row => row[index]));
 }
 
 /**
@@ -64,6 +64,18 @@ function diagonals(array) {
 }
 
 /**
+ * Test whether all cells of the supplied row contain the given character.
+ *
+ * @param {array} row - Row to test.
+ * @param {string} character - Character to test.
+ * @param {bool} - Row cells equal character, true/false.
+ */
+
+function cellsContainChar(character, row) {
+    return row.every(cell => cell === character);
+}
+
+/**
  * Test whether a board has _any_ empty cells.
  *
  * '', null and undefined are falsy in JavaScript, and thus coerce to false.
@@ -75,18 +87,6 @@ function diagonals(array) {
 
 function anyEmptyCells(board) {
     return board.some(row => row.some(cell => !cell));
-}
-
-/**
- * Test whether all cells of the supplied row contain the given character.
- *
- * @param {array} row - Row to test.
- * @param {string} character - Character to test.
- * @param {bool} - Row cells equal character, true/false.
- */
-
-function cellsContainChar(character, row) {
-    return row.every(cell => cell === character);
 }
 
 /**
