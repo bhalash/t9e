@@ -1,24 +1,22 @@
-const t9e = function(character, board) {
-    return this.rowContainsChar(character, board);
-};
+const t9e = function() {};
 
 /**
  * Generate a square multidimensional array of arbitrary size.
  *
  * @param {number} [size=3] - Size of grid (x and y).
- * @param {*=} value - Value to prepopulate into fields. Defaults to array keys.
+ * @param {function=} callback - Optional callback to prepopulate fields.
  * @return {array} array - Square multidimensional array.
  */
 
-t9e.prototype.grid = function(size, value) {
+t9e.prototype.grid = function(size, callback) {
     if (size === undefined) {
         size = 3;
     }
 
     let array = [...Array(size).keys()];
 
-    if (value !== undefined) {
-        array = array.map(() => value);
+    if (callback !== undefined) {
+        array = array.map(callback);
     }
 
     return array.map(() => array);
@@ -67,18 +65,6 @@ t9e.prototype.diagonals = function(array) {
 };
 
 /**
- * Test whether all cells of the supplied row contain the given character.
- *
- * @param {array} row - Row to test.
- * @param {string} character - Character to test.
- * @param {bool} - Row cells equal character, true/false.
- */
-
-t9e.prototype.cellsContainChar = function(character, row) {
-    return row.every(cell => cell === character);
-};
-
-/**
  * Test whether a board has _any_ empty cells.
  *
  * '', null and undefined are falsy in JavaScript, and thus coerce to false.
@@ -88,7 +74,7 @@ t9e.prototype.cellsContainChar = function(character, row) {
  * @return {bool} - At least one cell of the board is empty, true/false.
  */
 
-t9e.prototype.anyEmptyCells = function(board) {
+t9e.prototype.anyEmpty = function(board) {
     return board.some(row => row.some(cell => !cell));
 };
 
@@ -111,9 +97,9 @@ t9e.prototype.anyEmptyCells = function(board) {
  * @param {bool} - A row of the board all contain the given character, true/false.
  */
 
-t9e.prototype.rowContainsChar = function(character, board) {
+t9e.prototype.check = function(character, board) {
     return [].concat(board, this.transpose(board), this.diagonals(board)).some(row => {
-        return this.cellsContainChar(character, row);
+        return row.every(cell => cell === character);
     });
 };
 
