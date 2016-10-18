@@ -124,6 +124,10 @@ t9e.prototype.isSquare = function(array) {
  */
 
 t9e.prototype.check = function(character, board) {
+    if (!Array.isArray(board) || !this.isSquare(board)) {
+        return false;
+    }
+
     return [].concat(board, this.transpose(board), this.diagonals(board)).some(row => {
         return row.every(cell => cell === character);
     });
