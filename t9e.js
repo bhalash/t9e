@@ -1,6 +1,12 @@
 const t9e = function() {};
 
 /**
+ * Default size for new Tic-Tac-Toe boards.
+ */
+
+t9e.prototype.DEFAULT_SIZE = 3;
+
+/**
  * Generate a square multidimensional array of arbitrary size.
  *
  * @param {number} [size=3] - Size of grid (x and y).
@@ -10,7 +16,7 @@ const t9e = function() {};
 
 t9e.prototype.grid = function(size, callback) {
     if (size === undefined) {
-        size = 3;
+        size = this.DEFAULT_SIZE;
     }
 
     let array = [...Array(size).keys()];
