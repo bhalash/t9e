@@ -15,11 +15,22 @@ t9e.prototype.grid = function(size, callback) {
 
     let array = [...Array(size).keys()];
 
-    if (callback !== undefined) {
+    if (this.isFunction(callback)) {
         array = array.map(callback);
     }
 
     return array.map(() => array);
+};
+
+/**
+ * Test whether a variable is a function.
+ *
+ * @param {object} callback - Object to test.
+ * @return {bool} - Object is a function, true/false.
+ */
+
+t9e.prototype.isFunction = function(callback) {
+    return callback && Object.prototype.toString.call(callback) === '[object Function]';
 };
 
 /**
