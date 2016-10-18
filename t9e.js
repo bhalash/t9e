@@ -58,7 +58,7 @@ t9e.prototype.transpose = function(array) {
  * Return the diagonal elements of a square multidimensional array.
  *
  * @param {array} array - Multidimensional array of board cells.
- * @param {array} array - Multidimensional array of diagonal elements.
+ * @return {array} array - Multidimensional array of diagonal elements.
  */
 
 t9e.prototype.diagonals = function(array) {
