@@ -10,33 +10,22 @@ t9e.prototype.DEFAULT_SIZE = 3;
  * Generate a square multidimensional array of arbitrary size.
  *
  * @param {number} [size=3] - Size of grid (x and y).
- * @param {function=} callback - Optional callback to prepopulate fields.
+ * @param {value=} value- Optional value to prepopulate into fields.
  * @return {array} array - Square multidimensional array.
  */
 
-t9e.prototype.grid = function(size, callback) {
+t9e.prototype.grid = function(size, value) {
     if (size === undefined) {
         size = this.DEFAULT_SIZE;
     }
 
     let array = [...Array(size).keys()];
 
-    if (this.isFunction(callback)) {
-        array = array.map(callback);
+    if (value !== undefined) {
+        array = array.map(() => value);
     }
 
     return array.map(() => array);
-};
-
-/**
- * Test whether a variable is a function.
- *
- * @param {object} callback - Object to test.
- * @return {bool} - Object is a function, true/false.
- */
-
-t9e.prototype.isFunction = function(callback) {
-    return callback && Object.prototype.toString.call(callback) === '[object Function]';
 };
 
 /**
