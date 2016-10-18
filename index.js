@@ -22,6 +22,24 @@ const boards = {
 };
 
 /**
+ * Generate a square multidimensional array of arbitrary size.
+ *
+ * @param {number} [size=3] - Size of grid (x and y).
+ * @param {*=} value - Value to prepopulate into fields. Defaults to array keys.
+ * @return {array} array - Square multidimensional array.
+ */
+
+function grid(size, value) {
+    let array = [...Array(size || 3).keys()];
+
+    if (value !== undefined) {
+        array = array.map(() => value);
+    }
+
+    return array.map(() => array);
+}
+
+/**
  * Transpose an array.
  *
  * This is used to assist in evaluation of win conditions: Rather than change the
@@ -48,7 +66,7 @@ function transpose(array) {
 }
 
 /**
- * Return the diagonal elements of a multidimensional array.
+ * Return the diagonal elements of a square multidimensional array.
  *
  * @param {array} array - Multidimensional array of board cells.
  * @param {array} array - Multidimensional array of diagonal elements.
