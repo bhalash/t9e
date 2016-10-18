@@ -90,6 +90,21 @@ t9e.prototype.anyEmpty = function(board) {
 };
 
 /**
+ * Test whether an array is a sqare multidimensional array.
+ *
+ * @param {array} array
+ * @return {bool} - Array is multidimensonal and square, true/false.
+ */
+
+t9e.prototype.isSquare = function(array) {
+    const size = array.length;
+
+    return array.every(element => {
+        return Array.isArray(element) && element.length === size;
+    });
+};
+
+/**
  * Test whether a row of the passed game board contains the supplied character,
  * while the board is in the following configurations:
  *
