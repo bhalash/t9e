@@ -97,7 +97,7 @@ t9e.prototype.board = function(size, value) {
         size = DEFAULT_BOARD_SIZE;
     }
 
-    let board = [...Array(Math.abs(size)).keys()];
+    var board = [...Array(Math.abs(size)).keys()];
 
     if (value !== undefined) {
         board = board.map(() => value);
