@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bhalash/t9e.svg?branch=master)](https://travis-ci.org/bhalash/t9e)
+[![Build Status](https://travis-ci.org/bhalash/t9e.svg?branch=master)](https://travis-ci.org/bhalash/t9e) [![devDependencies Status](https://david-dm.org/bhalash/t9e/dev-status.png)](https://david-dm.org/bhalash/t9e?type=dev)
 
 # t9e
 t9e (t**ic-tac-to**e) is a [Tic-Tac-Toe][1] board generator and solution checker.
