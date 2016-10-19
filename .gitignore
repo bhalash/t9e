@@ -3,6 +3,7 @@
 !test/
 
 !.gitignore
+!.travis.yml
 !LICENSE
 !README.md
 !package.json
