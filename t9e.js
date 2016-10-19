@@ -93,11 +93,11 @@ function isSquare(array) {
  */
 
 t9e.prototype.board = function(size, value) {
-    if (!parseInt(size)) {
+    if (!parseInt(size) && size !== 0) {
         size = DEFAULT_BOARD_SIZE;
     }
 
-    let board = [...Array(size).keys()];
+    let board = [...Array(Math.abs(size)).keys()];
 
     if (value !== undefined) {
         board = board.map(() => value);
