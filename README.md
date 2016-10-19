@@ -45,8 +45,8 @@ const board = [
     ['O', 'O', 'X']
 ];
 
-t9e.test('X', board); // true
-t9e.test('O', board); // false
+t9e.check('X', board); // true
+t9e.check('O', board); // false
 ```
 
 To test whether _any_ cell of the board is empty (falsy):
