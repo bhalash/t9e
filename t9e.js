@@ -7,11 +7,12 @@ const t9e = function() {};
 t9e.prototype.DEFAULT_SIZE = 3;
 
 /**
- * Generate a square multidimensional array of arbitrary size.
+ * Generate a square multidimensional array of arbitrary size (a Tic-tac-toe
+ * board).
  *
  * @param {number} [size=3] - Size of grid (x and y).
  * @param {value=} value- Optional value to prepopulate into fields.
- * @return {array} array - Square multidimensional array.
+ * @return {array} board - Square multidimensional array.
  */
 
 t9e.prototype.board = function(size, value) {
@@ -19,13 +20,13 @@ t9e.prototype.board = function(size, value) {
         size = this.DEFAULT_SIZE;
     }
 
-    let array = [...Array(size).keys()];
+    let board = [...Array(size).keys()];
 
     if (value !== undefined) {
-        array = array.map(() => value);
+        board = board.map(() => value);
     }
 
-    return array.map(() => array);
+    return board.map(() => board);
 };
 
 /**
