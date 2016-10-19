@@ -14,7 +14,7 @@ t9e.prototype.DEFAULT_SIZE = 3;
  * @return {array} array - Square multidimensional array.
  */
 
-t9e.prototype.grid = function(size, value) {
+t9e.prototype.board = function(size, value) {
     if (size === undefined) {
         size = this.DEFAULT_SIZE;
     }
