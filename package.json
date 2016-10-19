@@ -1,10 +1,10 @@
 {
   "name": "t9e",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A Tic-Tac-Toe board generator and victory checker.",
   "main": "t9e.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bhalash/t9e#README.md",
   "devDependencies": {
-    "mocha": "^3.1.2"
+    "tape": "^4.6.2"
   }
 }
