@@ -67,11 +67,11 @@ function diagonals(array) {
 }
 
 /**
- * Test whether an array is a sqare multidimensional array.
+ * Test whether an array is a square multidimensional array.
  *
  * @private
  * @param {array} array
- * @return {bool} - Array is multidimensonal and square, true/false.
+ * @return {bool} - Array is multidimensional and square, true/false.
  */
 
 function isSquare(array) {
@@ -88,7 +88,7 @@ function isSquare(array) {
  *
  * @public
  * @param {number} [size=3] - Size of grid (x and y).
- * @param {value=} value- Optional value to prepopulate into fields.
+ * @param {value=} value- Optional value to pre-populate into fields.
  * @return {array} board - Square multidimensional array.
  */
 
@@ -138,7 +138,7 @@ t9e.prototype.anyEmpty = function(board) {
  * @public
  * @param {string} character - Character to test.
  * @param {array} board - Multidimensional array to test.
- * @param {bool} - A row of the board all contain the given character, true/false.
+ * @param {bool} - All cells in one of the board have the character, true/false.
  */
 
 t9e.prototype.check = function(character, board) {
