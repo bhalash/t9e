@@ -142,7 +142,7 @@ t9e.prototype.anyEmpty = function(board) {
  */
 
 t9e.prototype.check = function(character, board) {
-    if (!board || !Array.isArray(board) || !isSquare(board)) {
+    if (!board || !Array.isArray(board) || !board.length || !isSquare(board)) {
         return false;
     }
 
