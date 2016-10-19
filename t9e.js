@@ -93,7 +93,7 @@ function isSquare(array) {
  */
 
 t9e.prototype.board = function(size, value) {
-    if (size === undefined) {
+    if (!parseInt(size)) {
         size = DEFAULT_BOARD_SIZE;
     }
 
