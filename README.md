@@ -15,7 +15,7 @@ This project began in response to a [Hacktoberfest help request][2] on [tictacto
 
 ## But Senpai..._Why?_
 
-Boredom.
+Because.
 
 ## Installation
 
