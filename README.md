@@ -13,7 +13,7 @@ Currently three operations are supported:
 
 ## Why?
 
-This project began in response to a [Hacktoberfest help request][2] on [tictactoe-server][3]-refactor the solution checker to use ES6 syntax. My solution to the problem interested me enough to spin off the code.
+This project began in response to a [Hacktoberfest help request][2] on [tictactoe-server][3]. The ticket asked for the solution checker to use ES6 syntax. My solution to the problem interested me enough to spin off the code.
 
 ## But Senpai..._Why?_
 
