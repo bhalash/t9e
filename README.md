@@ -3,7 +3,7 @@
 # t9e
 t9e (t**ic-tac-to**e) is a [Tic-Tac-Toe][1] board generator and solution checker.
 
-Boards of arbitrary size are supported. Boards should be kept below ~1000 rows and columns on a size for code to remain performant.
+Boards of arbitrary size are supported. Boards should be kept below ~1000 rows and columns on a side for code to remain performant.
 
 Currently three operations are supported:
 
