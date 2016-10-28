@@ -1,6 +1,6 @@
 {
   "name": "t9e",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Tic-Tac-Toe board generator and victory checker.",
   "main": "t9e.js",
   "scripts": {
