@@ -148,7 +148,7 @@ t9e.prototype.check = function(character, board) {
         return false;
     }
 
-    return [].concat(board, transpose(board), diagonals(board)).some(row => {
+    return [...board, ...transpose(board), ...diagonals(board)].some(row => {
         return row.every(cell => cell === character);
     });
 };
